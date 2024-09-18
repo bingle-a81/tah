@@ -11,6 +11,8 @@ import moexalgo as moex
 from moexalgo import Market, Ticker
 
 
+
+
 # ------------ФУНКЦИИ------------------------
 def console_title(title):
     """Функция отображения названия окна консоли"""
@@ -20,6 +22,8 @@ def console_title(title):
     else:
         # Для других операционных систем используем команду 'echo'
         os.system("echo -n -e '\033]0;" + title + "\a' > /dev/tty")
+
+
 
 
 def log_plus(text):
@@ -285,6 +289,8 @@ else:
     # ищем из файла логов какие таймфреймы ранее были определены пользователем
     with open(filelog_path, "r", encoding="utf-8") as file:
         content = file.read()
+
+
 
     pattern = r"Спасибо! Вы ввели: ([0-4])"
     poisk = re.findall(pattern, content)
